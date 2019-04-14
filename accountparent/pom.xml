@@ -81,6 +81,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>mvnbook-releases</id>
+            <name>mvnbook releases repository</name>
+            <url>http://localhost:12335/repository/mvnbook-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>mvnbook-snapshorts</id>
+            <name>mvnbook snapshorts repository</name>
+            <url>http://localhost:12335/repository/mvnbook-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -123,7 +136,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
 
 

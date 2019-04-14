@@ -112,7 +112,12 @@ under the License.
    |-->
   <servers>
     <server>
-        <id>mvnbook</id>
+        <id>mvnbook-releases</id>
+        <username>admin</username>
+        <password>admin123</password>
+    </server>
+    <server>
+        <id>mvnbook-snapshorts</id>
         <username>admin</username>
         <password>admin123</password>
     </server>
@@ -163,12 +168,19 @@ under the License.
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
-     <mirror>
+    <mirror>
+        <id>alimaven</id>
+        <mirrorOf>*</mirrorOf>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+    </mirror>
+
+<!--      <mirror>
       <id>mvnbook</id>
       <name>mvnbook</name>
       <url>http://localhost:12335/repository/mvnbook/</url>
       <mirrorOf>*</mirrorOf>       
-    </mirror>
+    </mirror> -->
   </mirrors>
 
   <!-- profiles
@@ -203,24 +215,24 @@ under the License.
                 <releases>
                     <enabled>true</enabled>
                 </releases>
-                <snapshorts>
+                <snapshots>
                     <enabled>true</enabled>
-                </snapshorts>
+                </snapshots>
             </repository>
         </repositories>
-        <pluginRespositories>
-            <pluginRespository>
+        <pluginRepositories>
+            <pluginRepository>
                 <id>mvnbook</id>
                 <name>mvnbook</name>
                 <url>http://localhost:12335/repository/mvnbook/</url>
                 <releases>
                     <enabled>true</enabled>
                 </releases>
-                <snapshorts>
+                <snapshots>
                     <enabled>true</enabled>
-                </snapshorts>
-            </pluginRespository>
-        </pluginRespositories>
+                </snapshots>
+            </pluginRepository>
+        </pluginRepositories>
     </profile>
     <!-- profile
      | Specifies a set of introductions to the build process, to be activated using one or more of the
