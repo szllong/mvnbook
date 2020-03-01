@@ -28,7 +28,7 @@
             <artifactId>spring-context</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.google.code.kaptcha</groupId>
+            <groupId>com.github.penggle</groupId>
             <artifactId>kaptcha</artifactId>
         </dependency>
 

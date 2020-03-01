@@ -34,6 +34,10 @@
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <plugin-source.version>1.8</plugin-source.version>
         <plugin-target.version>1.8</plugin-target.version>
+        <java.version>1.8</java.version>
+        <jedis.version>3.0.0</jedis.version>
+        <github.global.server>github</github.global.server>
+        <repository.directory>D:\\maven_res</repository.directory>
     </properties>
 
     <dependencyManagement>
@@ -80,7 +84,7 @@
                 <version>${dom4j.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.google.code.kaptcha</groupId>
+                <groupId>com.github.penggle</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
             </dependency>
@@ -103,15 +107,10 @@
 
     <distributionManagement>
         <repository>
-            <id>mvnbook-releases</id>
-            <name>mvnbook releases repository</name>
-            <url>http://localhost:12335/repository/mvnbook-release/</url>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/szllong/mvnbook</url>
         </repository>
-        <snapshotRepository>
-            <id>mvnbook-snapshorts</id>
-            <name>mvnbook snapshorts repository</name>
-            <url>http://localhost:12335/repository/mvnbook-snapshot/</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <build>
@@ -153,6 +152,31 @@
                         <forkMode>once</forkMode>
                         <argLine>-Dfile.encoding=UTF-8</argLine>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.github</groupId>
+                    <artifactId>site-maven-plugin</artifactId>
+                    <version>0.12</version>
+                    <configuration>
+                        <message>Maven artifacts for ${project.artifactId}-${project.version}</message>
+                        <noJekyll>true</noJekyll>
+                        <outputDirectory>${repository.directory}/mvnbook</outputDirectory>
+                        <branch>refs/heads/master</branch>
+                        <merge>true</merge>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                        <repositoryName>web-sso-core</repositoryName>
+                        <repositoryOwner>deadzq</repositoryOwner>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>site</goal>
+                            </goals>
+                            <phase>deploy</phase>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
