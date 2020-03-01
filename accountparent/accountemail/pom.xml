@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>account-email</artifactId>
+    <version>${current.version}</version>
     <name>account email</name>
 
     <dependencies>

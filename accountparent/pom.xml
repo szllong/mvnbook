@@ -18,6 +18,7 @@
     </modules>
 
     <properties>
+        <current.version>1.4</current.version>
         <!--compile version-->
         <springframework.version>4.3.20.RELEASE</springframework.version>
         <javax.mail.version>1.6.2</javax.mail.version>

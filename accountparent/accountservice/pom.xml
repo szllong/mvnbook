@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>account-service</artifactId>
+    <version>${current.version}</version>
     <name>Account Service</name>
 
     <dependencies>

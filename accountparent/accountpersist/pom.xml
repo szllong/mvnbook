@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>account-persist</artifactId>
+    <version>${current.version}</version>
     <name>account persist</name>
 
     <dependencies>
