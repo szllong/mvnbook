@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../accountemail</module>
-        <module>../accountpersist</module>
-        <module>../accountcaptcha</module>
-        <module>../accountservice</module>
-        <module>../accountweb</module>
+        <module>accountemail</module>
+        <module>accountpersist</module>
+        <module>accountcaptcha</module>
+        <module>accountservice</module>
+        <module>accountweb</module>
     </modules>
 
     <properties>
