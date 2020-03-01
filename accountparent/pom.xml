@@ -9,6 +9,14 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>../accountemail</module>
+        <module>../accountpersist</module>
+        <module>../accountcaptcha</module>
+        <module>../accountservice</module>
+        <module>../accountweb</module>
+    </modules>
+
     <properties>
         <!--compile version-->
         <springframework.version>4.3.20.RELEASE</springframework.version>
@@ -16,7 +24,8 @@
         <slf4j-nop.version>1.7.9</slf4j-nop.version>
         <dom4j.version>1.6.1</dom4j.version>
         <kaptcha.version>2.3.2</kaptcha.version>
-
+        <servlet-api.version>2.5</servlet-api.version>
+        <jsp-api.version>2.2</jsp-api.version>
         <!--test version-->
         <juint.version>4.12</juint.version>
         <greenmail.version>1.5.10</greenmail.version>
@@ -48,6 +57,11 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context-support</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
                 <version>${springframework.version}</version>
             </dependency>
             <dependency>

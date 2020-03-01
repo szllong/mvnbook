@@ -82,6 +82,7 @@ under the License.
      | Specifies a further group identifier to use for plugin lookup.
     <pluginGroup>com.your.plugins</pluginGroup>
     -->
+    <pluginGroup>org.mortbay.jetty</pluginGroup>
   </pluginGroups>
 
   <!-- proxies
