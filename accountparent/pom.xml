@@ -28,7 +28,7 @@
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.2</jsp-api.version>
         <!--test version-->
-        <juint.version>4.12</juint.version>
+        <juint.version>4.13.1</juint.version>
         <greenmail.version>1.5.10</greenmail.version>
 
         <!--plugin version-->
