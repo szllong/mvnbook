@@ -20,7 +20,7 @@
     <properties>
         <current.version>1.4</current.version>
         <!--compile version-->
-        <springframework.version>4.3.20.RELEASE</springframework.version>
+        <springframework.version>5.3.19</springframework.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <slf4j-nop.version>1.7.9</slf4j-nop.version>
         <dom4j.version>1.6.1</dom4j.version>
